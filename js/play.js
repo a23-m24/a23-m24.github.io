@@ -16,7 +16,7 @@ window.addEventListener('load', () => {
         localStorage.theme == 'dark'
     }
 
-    localStorage.time4 = localStorage.time4 || 0;
+    localStorage.time4 = localStorage.time4;
     localStorage.time6 = localStorage.time6 || 0;
     localStorage.time8 = localStorage.time8 || 0;
     localStorage.click4 = localStorage.click4 || 0;
@@ -192,7 +192,7 @@ function isWin() {
     timeWin.innerHTML = ('Время: ' + timer.toFixed(1));
     clWin.innerHTML = ('Количество нажатий: ' + click);
     if (n == 4) {
-        if (timer.toFixed(1) < localStorage.time4 || localStorage.time4 == 0) {
+        if (timer.toFixed(1) < localStorage.time4 - 0 || localStorage.time4 == 0) {
             timeWin.innerHTML = ('Новый рекорд по времени: ' + timer.toFixed(1));
             localStorage.time4 = timer.toFixed(1);
         }
@@ -203,7 +203,7 @@ function isWin() {
         }
     }
     if (n == 6) {
-        if (timer.toFixed(1) < localStorage.time6 || localStorage.time6 == 0) {
+        if (timer.toFixed(1) < localStorage.time6 - 0 || localStorage.time6 == 0) {
             timeWin.innerHTML = ('Новый рекорд по времени: ' + timer.toFixed(1));
             localStorage.time6 = timer.toFixed(1);
         }
@@ -214,7 +214,7 @@ function isWin() {
         }
     }
     if (n == 8) {
-        if (timer.toFixed(1) < localStorage.time8 || localStorage.time8 == 0) {
+        if (timer.toFixed(1) < localStorage.time8 - 0 || localStorage.time8 == 0) {
             timeWin.innerHTML = ('Новый рекорд по времени: ' + timer.toFixed(1));
             localStorage.time8 = timer.toFixed(1);
         }
