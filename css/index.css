@@ -1,0 +1,182 @@
+:root {
+    --bk: rgba(182, 252, 79, 0.636);
+    --col: rgb(155, 9, 9);
+    --bnK: rgb(49, 222, 49);
+    --dblBrd: rgb(0, 154, 0);
+    --bnAr: greenyellow;
+}
+
+[data-theme="white"] {
+    --bk: rgba(182, 252, 79, 0.636);
+    --col: rgb(155, 9, 9);
+    --bnK: rgb(49, 222, 49);
+    --dblBrd: rgb(0, 154, 0);
+    --bnAr: greenyellow;
+}
+
+[data-theme="dark"] {
+    --bk: rgba(71, 0, 93, 0.75);
+    --col: rgb(250, 83, 164);
+    --bnK: rgb(69, 23, 77);
+    --dblBrd: rgb(43, 1, 50);
+    --bnAr: rgb(118, 0, 147);
+}
+
+body {
+    background-color: var(--bk);
+    text-align: center;
+    margin: 0%;
+}
+
+#buttonarea {
+    background-color: var(--bnAr);
+    text-align: center;
+    border-radius: 30px;
+    height: 60vh;
+}
+
+button,
+select {
+    height: 12vh;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 900;
+    color: var(--col);
+    background-color: var(--bnK);
+    border-radius: 20px;
+    vertical-align: middle;
+}
+
+label,
+h1 {
+    font-size: 4cqh;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 900;
+    color: var(--col);
+}
+
+h2 {
+    border-bottom: 1px black solid;
+    color: var(--col);
+    font-size: 6cqh;
+    margin: 0%;
+}
+
+body>div {
+    margin-top: 4vh;
+}
+
+div#res,
+div#rules {
+    margin: 10px;
+    text-align: start;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--bnK);
+    border: 5px var(--dblBrd) double;
+    font-size: 8cqh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 900;
+    color: var(--col);
+    margin: 0%;
+    height: 20vh;
+}
+
+p.rul {
+    margin-top: 5cqh;
+    text-indent: 3cqh;
+}
+
+p {
+    font-size: 3cqh;
+}
+
+li {
+    font-size: 2.5cqh;
+    margin-bottom: 1cqh;
+}
+
+@media (min-width: 820px) {
+    #info {
+        border: calc(min(5px, 0.5cqw)) var(--col) solid;
+        width: 10cqh;
+        height: 10cqh;
+        border-radius: 50%;
+        position: absolute;
+        left: 0%;
+        top: 2%;
+    }
+
+    img {
+        width: 5cqh;
+        height: 5cqh;
+    }
+
+    #save {
+        width: 30vw;
+        height: 8cqh;
+        float: right;
+        font-size: 3cqh;
+    }
+
+    #buttonarea {
+        width: 50vw;
+        margin-left: 24vw;
+        margin-top: 20vh;
+        border: calc(max(10px, 0.8cqw)) var(--col) solid;
+    }
+
+    button,
+    select {
+        font-size: 4cqh;
+        border: calc(max(5px, 0.5cqw)) var(--col) solid;
+        width: 45vw;
+        margin: 1.5vh;
+    }
+}
+
+@media (max-width: 820px) {
+    #info {
+        border: calc(min(5px, 0.5cqw)) var(--col) solid;
+        width: min(10cqh,20cqw);
+        height: min(10cqh,20cqw);
+        border-radius: 50%;
+        position: absolute;
+        left: 0%;
+        top: 2%;
+        z-index: 2;
+    }
+
+    img {
+        width: 5cqh;
+        height: 5cqh;
+    }
+
+    #buttonarea {
+        width: 90vw;
+        margin-left: 3vw;
+        margin-top: 20vh;
+        border: calc(max(10px, 0.8cqw)) var(--col) solid;
+    }
+
+    button,
+    select {
+        font-size: 4cqh;
+        border: calc(min(5px, 0.5cqw)) var(--col) solid;
+        width: 80cqw;
+        margin: 1.5vh;
+    }
+
+    #save {
+        width: 35vw;
+        height: 6cqh;
+        float: right;
+        font-size: 3cqh;
+    }
+}
