@@ -86,6 +86,7 @@ function createEl() {
 }
 function clickDiv() {
     if (win) return;
+    pause.disabled = false;
     if (!played1) {
         startPlay = setInterval(() => {
             timer += 0.1;
@@ -189,6 +190,7 @@ function isWin() {
     win = true;
     pause.disabled = true;
     clearInterval(startPlay);
+    played2 = true;
     timeWin.innerHTML = ('Время: ' + timer.toFixed(1));
     clWin.innerHTML = ('Количество нажатий: ' + click);
     if (n == 4) {
